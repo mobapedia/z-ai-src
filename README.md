@@ -32,19 +32,24 @@ index-C-J3cjKq.js
 index-B0qYmf3q.js  
 
 **to load with these files, run this tampermonkey script (instant inject, run-at document-start):
-new MutationObserver((mutationsList, observer) => {
-    for (const mutation of mutationsList) {
-        if (mutation.type === "childList" && mutation.addedNodes.length > 0) {
-            mutation.addedNodes.forEach((node) => {
-                if (node.tagName === "SCRIPT") {
-                    if (node.src === "https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.1.67/assets/index-zCAkFsQu.js") node.src = "https://raw.githack.com/mobapedia/z-ai-src/main/index-zCAkFsQu.js"
-                    if (node.src === "https://o.alicdn.com/frontend-lib/common-lib/jquery.min.js") node.src = "https://raw.githack.com/mobapedia/z-ai-src/main/jquery.min.js"
-                    observer.disconnect()
-                }
-            })
-        }
-    }
-}).observe(document, {
-    childList: true,
-    subtree: true
+//observer.disconnect somewhere IDK  
+new MutationObserver((mutationsList, observer) => {  
+    for (const mutation of mutationsList) {  
+        if (mutation.type === "childList" && mutation.addedNodes.length > 0) {  
+            mutation.addedNodes.forEach((node) => {  
+                if (node.tagName === "SCRIPT") {  
+                    switch (node.src) {  
+                        case "https://z-cdn.chatglm.cn/z-ai/frontend/prod-fe-1.1.67/assets/index-zCAkFsQu.js":  
+                            node.src = "https://raw.githack.com/mobapedia/z-ai-src/main/index-zCAkFsQu.js"  
+                            break  
+                        case "https://o.alicdn.com/frontend-lib/common-lib/jquery.min.js":  
+                            node.src = "https://raw.githack.com/mobapedia/z-ai-src/main/jquery.min.js"  
+                    }  
+                }  
+            })  
+        }  
+    }  
+}).observe(document, {  
+    childList: true,  
+    subtree: true  
 })

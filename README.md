@@ -28,7 +28,7 @@ tslib.es6-DE_iy5AC.js
 xlsx-DG2X6oDA.js  
 index-C-J3cjKq.js  
 
-**which in turn load:**  (CHECK THIS)
+**which in turn load:**  (CHECK THIS)  
 index-B0qYmf3q.js  
 
 **to load with these files, run this tampermonkey script (instant inject, run-at document-start)**:  

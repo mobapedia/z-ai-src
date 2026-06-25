@@ -31,7 +31,7 @@ index-C-J3cjKq.js
 **which in turn load:**  (CHECK THIS)
 index-B0qYmf3q.js  
 
-**to load with these files, run this tampermonkey script (instant inject, run-at document-start):
+**to load with these files, run this tampermonkey script (instant inject, run-at document-start)**:  
 //observer.disconnect somewhere IDK  
 new MutationObserver((mutationsList, observer) => {  
     for (const mutation of mutationsList) {  

@@ -1,6 +1,9 @@
 ***files as of 6/24/26***  
 
-**index loads:**  
+index-zCAkFsQu.js is a base file  
+jquery.min.js is a base file  
+
+**index-zCAkFsQu.js loads:**  
 DocxViewer-Db1C24Wi.js  
 LoginLogo-D7FiGWqv.js  
 PdfViewer-BEk7-Ig7.js  
